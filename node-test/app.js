@@ -39,32 +39,6 @@ app.post('/receiveBot', async (req, res) => {
         res.send("")
     }
 })
-app.post('/sendMessenger', async (req, res) => {
-    try {
-        const res = await fetch('https://api.amio.io/v1/messages', {
-            headers: {
-                'Content-Type': 'application/json',
-                "authorization": "Bearer Rp5s9KybT7Yi6RtdNbHqsIJ8Xh9BfBAKMMD5HhVLiRdFIRr34iICo65QG1rsko0pFUkMqbZYJiFtLbWLTHFbg1Wpay"
-            },
-            body: JSON.stringify({
-                "channel": {
-                  "id": "152975769551387"
-                },
-                "contact": {
-                  "id": "15297579838905937"
-                },
-                "content": {
-                  "type": "text",
-                  "payload": "Hello world!"
-                }
-            })
-        })
-        res.send(res)
-    } catch (err) {
-        res.status(500)
-        res.send(JSON.stringify(err))
-    }
-})
 
 app.post('/extract', async (req, res) => {
     try {
