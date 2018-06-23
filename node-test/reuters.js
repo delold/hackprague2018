@@ -48,4 +48,8 @@ const app = async (hashtag) => {
     await browser.close()
 }
 
+<<<<<<< HEAD
 app('antigun')
+=======
+app('no2eu')
+>>>>>>> 6c56e487ecc0cd4375b7e77015b8f248ae44eddc
