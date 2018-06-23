@@ -1,0 +1,16 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsdom": "^11.11.0",
+    "node-fetch": "^2.1.2",
+    "unfluff": "^3.0.1"
+  }
+}
