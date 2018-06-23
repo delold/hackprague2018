@@ -21,10 +21,11 @@ const searchPage = async(page, hashtag) => {
                 while (document.querySelectorAll('.tweet-text').length <= stuff.length) {
                     await wait(500)
                     attempts++
-                    if (attempts >= 10) {
+                    if (attempts >= 100) {
                         breakStuff = false
                         break
                     }
+                    (document.scrollingElement || document.body).scrollTop = (document.scrollingElement || document.body).scrollHeight
                 }
             } else {
                 break
@@ -39,7 +40,7 @@ const searchPage = async(page, hashtag) => {
     fs.writeFileSync(`${hashtag}.txt`, data.join('\n'))
 }
 const app = async (hashtag) => {
-    const browser = await puppeteer.launch({ headless: false })
+    const browser = await puppeteer.launch({ headless: true })
     const page = await browser.newPage()
     await page.setViewport({ width: 1080, height: 1080 })
 
@@ -47,4 +48,4 @@ const app = async (hashtag) => {
     await browser.close()
 }
 
-app('2ndamendment')
+app('antigun')
