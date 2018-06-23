@@ -47,4 +47,4 @@ const app = async (hashtag) => {
     await browser.close()
 }
 
-app('2ndamendment')
+app('no2eu')
