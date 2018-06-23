@@ -1,0 +1,5 @@
+dataset/
+scrapper/
+ocr-reader/
+node_modules/
+*.txt

@@ -5,6 +5,7 @@ const unfluff = require('unfluff')
 const { JSDOM } = require('jsdom')
 const fetch = require('node-fetch')
 const { AmioApi, WebhookRouter } = require('amio-sdk-js')
+const cors = require('cors')
 
 const chatbot = new AmioApi({
     accessToken: 'Rp5s9KybT7Yi6RtdNbHqsIJ8Xh9BfBAKMMD5HhVLiRdFIRr34iICo65QG1rsko0pFUkMqbZYJiFtLbWLTHFbg1Wpay'
@@ -14,7 +15,7 @@ const chatRouter = new WebhookRouter({
     secretToken: 'zob6f4FuFeO5I4Gl4shmHyswivEcRN'
 })
 
-
+app.use(cors())
 app.use(bodyparser.json())
 
 const handleRequest = async (text) => {

@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "FakeBreaker",
+    "icons": {
+        "128": "icon.png"
+    },
+    "description": "Fact check a sentence from your context menu",
+    "version": "1.0",
+    "background": {
+        "scripts": [
+            "browser-polyfill.min.js",
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "notifications"
+    ]
+}
